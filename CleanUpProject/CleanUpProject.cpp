@@ -23,21 +23,25 @@ int main()
 		return 0;
 	}
 	std::string line;
+	std::string fileExtentionString;
+	std::string directoryString;
 	while (std::getline(gitignoreFile, line))
 	{
 		std::string::size_type pos = line.find_first_of("*");
 		if (pos != std::string::npos)
 		{
 			line.erase(0, 1);
-			std::cout << "file extention:" << line << std::endl;
+			fileExtentionString += line;
 			filesExtentions.push_back(line);
 		}
 		else
 		{
-			std::cout << "directory name:" << line << std::endl;
+			directoryString += line + " ";
 			directoriesNames.push_back(line);
 		}
 	}
+	std::cout << "load file extention:" << fileExtentionString << std::endl;
+	std::cout << "load directory     :"<<directoryString << std::endl;
 
 	// 读取到的文件和目录
 	std::vector<std::string> files;
@@ -78,7 +82,7 @@ int main()
 
 	for (auto file : files)
 	{
-		std::cout << "delete file:"<<file << std::endl;
+		std::cout << "delete file:" << file << std::endl;
 		std::filesystem::remove_all(file);
 	}
 	std::cout << "clean up complete!!!" << std::endl;
