@@ -15,6 +15,13 @@ int main()
 	// 读取gitignore文件
 	std::string gitignorePath = currendPath + "/.gitignore";
 	std::ifstream gitignoreFile(gitignorePath);
+	// 检查文件是否存在
+	if (!gitignoreFile.is_open())
+	{
+		std::cout << "gitignore file not found!!!" << std::endl;
+		system("pause");
+		return 0;
+	}
 	std::string line;
 	while (std::getline(gitignoreFile, line))
 	{
