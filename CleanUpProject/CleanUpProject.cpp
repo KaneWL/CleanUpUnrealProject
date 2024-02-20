@@ -31,12 +31,12 @@ int main()
 		if (pos != std::string::npos)
 		{
 			line.erase(0, 1);
-			fileExtentionString += line;
+			fileExtentionString += line + "  ";
 			filesExtentions.push_back(line);
 		}
 		else
 		{
-			directoryString += line + " ";
+			directoryString += line + "  ";
 			directoriesNames.push_back(line);
 		}
 	}
