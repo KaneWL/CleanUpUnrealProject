@@ -31,12 +31,12 @@ int main()
 		if (pos != std::string::npos)
 		{
 			line.erase(0, 1);
-			fileExtentionString += line;
+			fileExtentionString += line + "  ";
 			filesExtentions.push_back(line);
 		}
 		else
 		{
-			directoryString += line + " ";
+			directoryString += line + "  ";
 			directoriesNames.push_back(line);
 		}
 	}
@@ -86,6 +86,8 @@ int main()
 		std::filesystem::remove_all(file);
 	}
 	std::cout << "clean up complete!!!" << std::endl;
+#if _DEBUG
 	system("pause");
+#endif
 	return 0;
 }

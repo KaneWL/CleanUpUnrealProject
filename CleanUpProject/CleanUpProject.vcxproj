@@ -72,19 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\Bin\</OutDir>
-    <IntDir>$(SolutionDir)\Bin\Int</IntDir>
+    <IntDir>$(SolutionDir)\Bin\Int\</IntDir>
+    <TargetName>clp</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\Bin\</OutDir>
-    <IntDir>$(SolutionDir)\Bin\Int</IntDir>
+    <IntDir>$(SolutionDir)\Bin\Int\</IntDir>
+    <TargetName>clp</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\Bin\</OutDir>
-    <IntDir>$(SolutionDir)\Bin\Int</IntDir>
+    <IntDir>$(SolutionDir)\Bin\Int\</IntDir>
+    <TargetName>clp</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\Bin\</OutDir>
-    <IntDir>$(SolutionDir)\Bin\Int</IntDir>
+    <IntDir>$(SolutionDir)\Bin\Int\</IntDir>
+    <TargetName>clp</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
